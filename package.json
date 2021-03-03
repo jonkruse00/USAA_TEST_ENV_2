@@ -1,0 +1,94 @@
+{
+  "name": "USAA_TEST_ENV_2",
+  "version": "1.0.0",
+  "description": "Proof of concept for FR Dashboard UI structure",
+  "main": "src/index.jsx",
+  "scripts": {
+    "lint": "npx eslint --ext .js --ext .jsx src",
+    "lint-fix": "npx eslint --fix --ext .js --ext .jsx src",
+    "test": "jest",
+    "test-watch": "jest --watchAll"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-react": "^7.12.13",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "less": "^4.1.1",
+    "react-test-renderer": "^17.0.1"
+  },
+  "dependencies": {
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "airbnb/hooks",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "es2020": true,
+      "jest": true,
+      "node": true
+    },
+    "plugins": [
+      "react",
+      "html"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "impliedStrict": true,
+        "jsx": true
+      }
+    },
+    "rules": {
+      "import/prefer-default-export": "error",
+      "no-use-before-define": [
+        "error",
+        "nofunc"
+      ]
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.{js,jsx}",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": -10
+      }
+    },
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}
