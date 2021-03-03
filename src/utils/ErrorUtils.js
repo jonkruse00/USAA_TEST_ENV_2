@@ -1,8 +1,11 @@
-import ERROR from '../const/Error'
+import ERROR from "../const/Error";
 
 const ErrorUtils = {
-  hasAdmin: (permission) => permission === 'admin',
-  whichError: (code) => code ===  ERROR.code.threeHundredThree ? ERROR.localStorageDisabled : ERROR.localStorageParsing
-}
+  hasAdmin: (permission) => permission === "admin",
+  whichError: (code) =>
+    code === ERROR.code.threeHundredThree
+      ? ERROR.localStorageDisabled
+      : ERROR.localStorageParsing,
+};
 
-export default ErrorUtils; 
+export default ErrorUtils;

@@ -1,11 +1,11 @@
 {
-  "name": "USAA_TEST_ENV_2",
+  "name": "usaa_test_env_2",
   "version": "1.0.0",
   "description": "Proof of concept for FR Dashboard UI structure",
   "main": "src/index.jsx",
   "scripts": {
-    "lint": "npx eslint --ext .js --ext .jsx src",
-    "lint-fix": "npx eslint --fix --ext .js --ext .jsx src",
+    "lint": "npx eslint --ext .js,.jsx,.json src test",
+    "lint-fix": "npx eslint --fix --ext .js,.jsx,.json src test",
     "test": "jest",
     "test-watch": "jest --watchAll"
   },
@@ -41,7 +41,8 @@
     "extends": [
       "airbnb",
       "airbnb/hooks",
-      "prettier"
+      "prettier",
+      "plugin:jsx-a11y/recommended"
     ],
     "env": {
       "browser": true,
@@ -63,6 +64,13 @@
     },
     "rules": {
       "import/prefer-default-export": "error",
+      "no-console": "error",
+      "max-len": [
+        "error",
+        {
+          "code": 80
+        }
+      ],
       "no-use-before-define": [
         "error",
         "nofunc"
@@ -90,5 +98,19 @@
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     }
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonkruse00/USAA_TEST_ENV_2.git"
+  },
+  "author": "jon kruse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonkruse00/USAA_TEST_ENV_2/issues"
+  },
+  "homepage": "https://github.com/jonkruse00/USAA_TEST_ENV_2#readme"
 }
