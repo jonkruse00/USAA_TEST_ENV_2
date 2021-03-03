@@ -84,6 +84,9 @@
         "statements": -10
       }
     },
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     }
