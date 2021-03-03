@@ -1,21 +1,15 @@
-import React from 'react';
-import { WELCOME_MSG } from '../const/Greetings';
+import React from "react";
+import { WELCOME_MSG } from "../const/Greetings";
 
-import './Page.less';
+import "./Page.less";
 
-if (test) {
-  console.log('tww');
-} 
-else {
-  console.log('tww');
-}
+console.log("woof");
 
 const Page = () => (
   <div className="button-wrapper">
     {WELCOME_MSG.heading}
-    <div className="link-button">
-      Button
-    </div>
+    <img src="woof.jpg" alt="woof" />
+    <div className="link-button">dddd</div>
     {WELCOME_MSG.footer.main}
   </div>
 );
